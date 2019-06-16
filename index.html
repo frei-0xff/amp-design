@@ -243,8 +243,8 @@
       a:hover {
       color: #033bb5; /* var(--accent-color-hover); */ 
       text-decoration: underline;}
-
-
+      
+      
       /* Buttons
       –––––––––––––––––––––––––––––––––––––––––––––––––– */
       .button,
@@ -289,8 +289,7 @@
       input[type="button"].button-primary {
       color: var(--button-primary-color);
       background-color: #033bb5; /* var(--accent-color); */
-      border-color: #033bb5; /* var(--accent-color); */
-      text-decoration: none; }
+      border-color: #033bb5; /* var(--accent-color); */ }
       .button.button-primary:hover,
       button.button-primary:hover,
       input[type="submit"].button-primary:hover,
@@ -303,8 +302,11 @@
       input[type="button"].button-primary:focus {
       color: var(--button-primary-color);
       background-color: #044ae2; /* var(--accent-color-hover); */
-      border-color: #044ae2; /* var(--accent-color-hover); */
-      text-decoration: none; }
+      border-color: #044ae2; /* var(--accent-color-hover); */ }
+
+      a.button:hover, a.button:focus, a.button:active{
+        text-decoration: none;
+      }
 
 
       /* Forms
