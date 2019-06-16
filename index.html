@@ -593,7 +593,7 @@
       }
 
       .jumbotron {
-        padding: 2rem 1rem;
+        padding: 0.5rem 1rem 2rem 1rem;
       }
 
       .jumbotron hr {
@@ -627,7 +627,7 @@
       }
       @media (min-width: 900px) {
         .firm-name {
-          margin-left: 2rem;
+          margin-left: 0.5rem;
           margin-bottom: 1rem;
         }
       }
@@ -639,6 +639,12 @@
       }
       amp-img.orig-size img {
         object-fit: none;
+        object-position: 0 50%;
+      }
+      @media (min-width: 900px) {
+        amp-img.orig-size img{
+          object-position: 50% 50%;
+        }
       }
     </style>
   </head>
@@ -661,7 +667,7 @@
       <article class="container">
         <div class="jumbotron">
           <div class="logotip-flex">
-            <div style="position: relative;width: 150px;height: 50px;">
+            <div style="position: relative;width: 100px;height: 75px;">
               <a href="http://www.inmak.com" target="_blank" rel="nofollow">
                 <amp-img class="orig-size"
                          layout="fill"
