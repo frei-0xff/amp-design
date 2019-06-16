@@ -244,7 +244,7 @@
       color: #033bb5; /* var(--accent-color-hover); */ 
       text-decoration: underline;}
       
-      
+
       /* Buttons
       –––––––––––––––––––––––––––––––––––––––––––––––––– */
       .button,
@@ -468,8 +468,13 @@
       hr {
       margin-top: 3rem;
       margin-bottom: 3.5rem;
-      border-width: 0;
-      border-top: 1px solid var(--border-color-softer); }
+      /* border-width: 0;
+        border-top: 1px solid var(--border-color-softer); */
+      box-sizing: content-box;
+      height: 0;
+      overflow: visible;
+      border: 0;
+      border-top: #e5ebf3 3px solid;}
 
 
       /* Clearing
@@ -586,6 +591,52 @@
         user-select: none;
         cursor: pointer;
       }
+
+      .jumbotron {
+        padding: 2rem 1rem;
+      }
+
+      .jumbotron hr {
+        margin-top: 1.5rem;
+        margin-bottom: 1.8rem;
+      }
+
+      @media (min-width: 600px) {
+        .jumbotron {
+          padding: 3rem 2rem;
+        }
+      }
+      .logotip-flex{
+        display: block;
+      }
+      @media (min-width: 900px) {
+        .logotip-flex{
+          align-items: center;
+          display: flex;
+        }
+      }
+      .firm-name {
+        font-size: 2.5rem;
+        font-weight: normal;
+        line-height: 1.2;
+      }
+      @media (min-width: 600px) {
+        .firm-name {
+          font-size: 3.0rem;
+        }
+      }
+      @media (min-width: 900px) {
+        .firm-name {
+          margin-left: 2rem;
+          margin-bottom: 1rem;
+        }
+      }
+      .address{
+        margin-top: 1rem;
+      }
+      .user-content {
+        overflow-x: hidden;
+      }
     </style>
   </head>
    <body>
@@ -605,6 +656,22 @@
         </ul>
       </amp-sidebar>
       <article class="container">
+        <div class="jumbotron">
+          <div class="logotip-flex">
+            <a href="http://www.inmak.com" target="_blank" rel="nofollow">
+              <img src="http://inmak.inmak.com/logop.gif"
+                alt=" ИнМАК , научно-производственная компания, ООО  Харьков портал , Харьков Украина, бизнес каталог инмак поисковый сервер деловых партнеров сети интернет, информационные услуги продвижение бизнеса заказчиков, размещение коммерческих предложений сервере, прайс листов любых объемов, логотипов, коллекций фотографий, WEB страничек, интеграция сайтов поисковой системой, предоставление доменных имен, хостинг технической площадке киеве UA IX, реклама баннерной, база данных коммерческие предложения товары цены, спрос предложение опт розница, предприятия фирмы магазины предприниматели, украина россия снг русскоязычное деловое пространство, межрегиональная справка, маркетинговые исследования, дизайн разработка создание, баннеров для, магазинов столов заказов, программного обеспечения, специализированных субд, сверхбыстрый сверхбольших базах">
+            </a>
+            <h1 class="firm-name">
+              "ИнМАК", научно-производственная компания, ООО
+            </h1>
+          </div>
+          <p class="address">Украина, Харьков</p>
+          <hr>
+          <div class="user-content">
+              <b>Хостинг</b> + <b>раскрутка сайта</b> = в одних деньгах.<BR>Создание, разработка, изготовление, программирование, размещение, продвижение сайта, WEB-дизайн. Интернет-реклама. Поисковая оптимизация сайта.<BR>Наше здание (ул.Королева, 2-А, корп.3) расположено вдоль улицы Королева.<BR><BR>Адрес для отправки документов почтой (договоры, акты, счета): <br> 308033, г.Белгород, ул.Королева, 2-А, корп.3, оф.316
+          </div>
+        </div>
         <h1>Добро пожаловать в мобильный WEB</h1>
         <h4>Наш адрес</h4>
         <p>
