@@ -567,6 +567,21 @@
         }
       }
 
+      ul.sidebar{
+        list-style: none;
+        padding: .5rem 1.2rem;
+      }
+      ul.sidebar li{
+        display: block;
+        padding: .5rem 1rem;
+      }
+      .close-sidebar{
+        padding: .5rem .5rem .5rem 1.2rem;
+      }
+      .close-sidebar span{
+        user-select: none;
+        cursor: pointer;
+      }
     </style>
   </head>
    <body>
@@ -578,11 +593,11 @@
         </div>
       </header>
       <amp-sidebar id="nav-sidebar" layout="nodisplay" side="right" class="nav-sidebar">
-        <div role="button" aria-label="close sidebar" on="tap:nav-sidebar.toggle" tabindex="0" class="close-sidebar">&#x2715;</div>
+        <div role="button" aria-label="close sidebar" on="tap:nav-sidebar.toggle" tabindex="0" class="close-sidebar"><span>&#x2715;</span></div>
         <ul class="sidebar">
-          <li><a href="#">Example 1</a></li>
-          <li><a href="#">Example 2</a></li>
-          <li><a href="#">Example 3</a></li>
+          <li><a href="#">Перейти на сайт</a></li>
+          <li><a href="#">Наша галерея</a></li>
+          <li><a href="#">Наши видео</a></li>
         </ul>
       </amp-sidebar>
       <article class="container">
