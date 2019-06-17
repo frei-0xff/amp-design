@@ -77,8 +77,9 @@
       --text-color-normal: #000f50; /* hsl(var(--theme-hue), 0%, 13%); */		/* #222222 		text color; button:hover:focus color */
       --text-color-softer: hsl(var(--theme-hue), 0%, 33%);		/* #555555 		button color; button:hover border */
 
-      --accent-color: hsl(var(--accent-hue), 86%, 57%);				/* #33C3F0 		link; button-primary bg+border; textarea,select:focus border */
-      --accent-color-hover: hsl(var(--accent-hue), 76%, 49%);	/* #1EAEDB 		link hover; button-primary:hover:focus bg+border */
+      --accent-color: #033bb5; /* hsl(var(--accent-hue), 86%, 57%); */				/* #33C3F0 		link; button-primary bg+border; textarea,select:focus border */
+      --accent-color-hover: #044ae2; /* hsl(var(--accent-hue), 76%, 49%); */	/* #1EAEDB 		link hover; button-primary:hover:focus bg+border */
+      --darker-accent-color: #022c8e;
 
       --border-color: hsl(var(--theme-hue), 0%, 73%);					/* #bbbbbb		button border */
       --border-color-softer: hsl(var(--theme-hue), 0%, 82%);	/* #d1d1d1		textarea,select,code,td,hr border	 */
@@ -96,47 +97,6 @@
 
       /* Grid Defaults - default to match orig skeleton settings */
       --grid-max-width: 960px;
-      }
-
-      /*  Dark Theme
-      Note: prefers-color-scheme selector support is still limited, but 
-      included for future and an example of defining a different base 'theme'
-      */
-      @media (prefers-color-scheme: dark) {
-      :html {
-        /* dark theme: light background, dark text, blue accent */
-        --theme-hue: 0;					/* black */
-        --accent-hue: 194;			/* blue */
-
-        --text-color-richer: hsl(var(--theme-hue), 0%, 95%);		/* 		*/
-        --text-color-normal: hsl(var(--theme-hue), 0%, 80%);		/* text color; button:hover:focus color */
-        --text-color-softer: hsl(var(--theme-hue), 0%, 67%);		/* button color; button:hover border */
-
-        --accent-color: hsl(var(--accent-hue), 76%, 49%);				/* link; button-primary bg+border; textarea,select:focus border */
-        --accent-color-hover: hsl(var(--accent-hue), 86%, 57%);	/* link hover; button-primary:hover:focus bg+border */
-
-        --border-color: hsl(var(--theme-hue), 0%, 27%);					/* button border */
-        --border-color-softer: hsl(var(--theme-hue), 0%, 20%);	/* textarea,select,code,td,hr border	 */
-
-        --background-color: hsl(var(--theme-hue), 0%, 12%);			/* body background; textarea,select background */
-        --background-color-softer: hsl(var(--theme-hue), 0%, 18%);
-        --code-background: hsl(var(--theme-hue), 0%, 5%);				/* code background*/
-
-        --button-primary-color: white;
-      }
-
-      img.value-img {
-        filter: invert(0.8);
-      }
-      /* TODO - test dialing back image intensity on dark background
-      img {
-        opacity: .80;
-        transition: opacity .5s ease-in-out;
-      }
-      img:hover {
-        opacity: 1;
-      }
-      */
       }
 
 
@@ -217,7 +177,7 @@
       margin-top: 0;
       margin-bottom: 2rem;
       font-weight: 400; /* 300; */
-      color: #022c8e;
+      color: var(--darker-accent-color);
       }
       h1 { font-size: 4.2rem; line-height: 1.2; /* letter-spacing: -.1rem; */ }
       h2 { font-size: 3.8rem; line-height: 1.25; /* letter-spacing: -.1rem; */ }
@@ -243,10 +203,10 @@
       /* Links
       –––––––––––––––––––––––––––––––––––––––––––––––––– */
       a {
-      color: #044ae2; /* var(--accent-color); */ 
+      color: var(--accent-color-hover); /* var(--accent-color); */ 
       text-decoration: none;}
       a:hover {
-      color: #033bb5; /* var(--accent-color-hover); */ 
+      color: var(--accent-color); /* var(--accent-color-hover); */ 
       text-decoration: underline;}
       
 
@@ -293,8 +253,8 @@
       input[type="reset"].button-primary,
       input[type="button"].button-primary {
       color: var(--button-primary-color);
-      background-color: #033bb5; /* var(--accent-color); */
-      border-color: #033bb5; /* var(--accent-color); */ }
+      background-color: var(--accent-color);
+      border-color: var(--accent-color); }
       .button.button-primary:hover,
       button.button-primary:hover,
       input[type="submit"].button-primary:hover,
@@ -306,8 +266,8 @@
       input[type="reset"].button-primary:focus,
       input[type="button"].button-primary:focus {
       color: var(--button-primary-color);
-      background-color: #044ae2; /* var(--accent-color-hover); */
-      border-color: #044ae2; /* var(--accent-color-hover); */ }
+      background-color: var(--accent-color-hover);
+      border-color: var(--accent-color-hover); }
 
       a.button:hover, a.button:focus, a.button:active{
         text-decoration: none;
@@ -552,7 +512,7 @@
         background-size: 100% 100%;
       }
       .headerbar{
-        background: #022c8e;
+        background: var(--darker-accent-color);
         padding: .5rem 1rem;
       }
       .nav{
@@ -669,7 +629,7 @@
         border-radius: 50%;
         border: none;
         outline: none;
-        background: #033bb5;
+        background: var(--accent-color);
         z-index: 9999;
         bottom: 1rem;
         right: 1rem;
