@@ -624,15 +624,17 @@
       }
       #scrollToTop {
         box-shadow: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-        width: 40px;
-        height: 40px;
+        --space: 1rem;
+        --size: 40px;
+        width: var(--size);
+        height: var(--size);
         border-radius: 50%;
         border: none;
         outline: none;
         background: var(--accent-color);
         z-index: 9999;
-        bottom: 1rem;
-        right: 1rem;
+        bottom: var(--space);
+        right: var(--space);
         position: fixed;
         opacity: 0;
         visibility: hidden;
@@ -641,6 +643,12 @@
         background-size: 50% 50%;
         background-position: center center;
         background-repeat: no-repeat;
+      }
+      @media (min-width: 900px) {
+        #scrollToTop{
+          --space: 1.5rem;
+          --size: 50px;
+        }
       }
     </style>
   </head>
