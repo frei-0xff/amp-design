@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+    <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <title>"ИнМАК", научно-производственная компания, ООО Харьков Украина | бизнес каталог инмак поисковый сервер деловых партнеров сети интернет информационные услуги продвижение бизнеса заказчиков размещение коммерческих предложений сервере прайс листов любых объемов логотипов коллекций фотографий WEB страничек интеграция сайтов поисковой системой предоставление доменных имен хостинг технической площадке киеве UA IX реклама баннерной база данных коммерческие предложения товары цены спрос предложение опт розница предприятия фирмы магазины предприниматели украина россия снг русскоязычное деловое пространство межрегиональная справка маркетинговые исследования дизайн разработка создание баннеров для магазинов столов заказов программного обеспечения специализированных субд сверхбыстрый сверхбольших базах</title>
     <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup">
@@ -660,6 +662,26 @@
       footer hr {
         margin-bottom: 1.7rem;
       }
+      #scrollToTop {
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        background: #033bb5;
+        z-index: 9999;
+        bottom: 1rem;
+        right: 1rem;
+        position: fixed;
+        opacity: 0;
+        visibility: hidden;
+        background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='rgba(255,255,255, 0.9)' d='M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z'%3E%3C/path%3E%3C/svg%3E");
+        content: "";
+        background-size: 50% 50%;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
     </style>
   </head>
   <body>
@@ -680,6 +702,20 @@
         <li><a href="#videos">Наши видео</a></li>
       </ul>
     </amp-sidebar>
+    <amp-animation id="showAnim" layout="nodisplay">
+      <script type="application/json">
+      { "duration": "200ms", "fill": "both", "iterations": "1", "direction": "alternate", "animations": [{
+          "selector": "#scrollToTop", "keyframes": [{ "opacity": "1", "visibility": "visible" }] }]
+      }
+      </script>
+    </amp-animation>
+    <amp-animation id="hideAnim" layout="nodisplay">
+      <script type="application/json">
+      { "duration": "200ms", "fill": "both", "iterations": "1", "direction": "alternate", "animations": [{
+          "selector": "#scrollToTop", "keyframes": [{ "opacity": "0", "visibility": "hidden" }] }]
+      }
+      </script>
+    </amp-animation>
     <main class="container">
       <div class="jumbotron">
         <div class="logotip-flex">
@@ -695,6 +731,8 @@
         </div>
         <p class="address">Украина, Харьков</p>
         <hr>
+        <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay">
+        </amp-position-observer>
         <div class="user-content">
           <b>Хостинг</b> + <b>раскрутка сайта</b> = в одних деньгах.<BR>Создание, разработка, изготовление,
           программирование, размещение, продвижение сайта, WEB-дизайн. Интернет-реклама. Поисковая оптимизация
@@ -753,10 +791,12 @@
           <amp-img src="https://dummyimage.com/800x400/000/fff" alt="Welcome" height="400" width="800"></amp-img>
                 -->
       <amp-youtube data-videoid="YApuEWtG30w" layout="responsive" width="480" height="270"></amp-youtube>
+      <br><br><br><br><br><br><br><br><br><br><br>
     </main>
     <footer class="container">
       <hr>
       Система SEO-продвижения &laquo;ИнМАК&raquo;, 1998-2019
     </footer>
+    <a href="#" id="scrollToTop"></a>
   </body>
 </html>
