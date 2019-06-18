@@ -407,7 +407,7 @@
       ul,
       ol,
       form {
-      margin-bottom: 2.5rem; }
+      margin-bottom: 2rem; }
 
 
       /* Utilities
@@ -650,6 +650,38 @@
           --size: 50px;
         }
       }
+      .jumbotron-2 {
+        padding: 0.5rem 1rem 2rem 1rem;
+        text-align: left;
+        grid-gap: 10px;
+        gap: 10px;
+      }
+      .jumbotron-2 p {
+        margin-bottom: 1rem;
+      }
+      .jumbotron-2 .button {
+        padding: 0 50px;
+      }
+      @media (min-width: 600px) {
+        .jumbotron-2 {
+          padding: 3rem 2rem;
+          grid-gap: 30px;
+          gap: 30px;
+        }
+        .jumbotron-2 p {
+          margin-bottom: 2rem;
+        }
+      }
+      @media (min-width: 900px) {
+        .jumbotron-2 .right-cell {
+          padding-left: 3rem;
+        }
+      }
+      @media (min-width: 1200px) {
+        .jumbotron-2 .right-cell {
+          padding-left: 5rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -709,14 +741,40 @@
           документов почтой (договоры, акты, счета): <br> 308033, г.Белгород, ул.Королева, 2-А, корп.3, оф.316
         </div>
       </div>
+      <div class="grid-container halves jumbotron-2">
+        <div>
+          <h4>Наш адрес</h4>
+          <p>Россия, г.Белгород, 308033, ул.Королева, 2-А, корп.3, оф. 419, эт. 4, (Харгора, Электроконтакт) </p>
+          <p><strong>График работы:</strong><br>
+            09.00-18.00, пер. 13.00-14.00; СБ, ВС вых.
+          </p>
+        </div>
+        <div class="right-cell">
+          <h4>Мы на связи</h4>
+          <p><strong>Телефон:</strong>&nbsp;
+            <span>(4722)&nbsp;58-54-01<br />(4722)&nbsp;58-54-05</span></p>
+          <p><strong>Факс:</strong>&nbsp;
+            (4722)&nbsp;58-54-01</p>
+        </div>
+        <div>
+          <h4>Мы&nbsp;в&nbsp;Интернете</h4>
+          <p><strong>Официальный сайт:</strong><br />
+            <a href="http://www.pro.inmak.ru" target="_blank">www.pro.inmak.ru</a>
+          </p>
+          <p>Размещение в бизнес-каталоге <a href="http://inmak.ru/" target="_blank">ИнМАК</a>
+          </p>
+        </div>
+        <div class="right-cell">
+          <a class="button button-primary" href="http://www.inmak.com" role="button" target="_blank" rel="nofollow">
+            Перейти на сайт&nbsp;&raquo;</a>
+        </div>
+      </div>
       <h1>Добро пожаловать в мобильный WEB</h1>
       <h4 id="videos">Наш адрес</h4>
       <p>
         <b>График работы:</b> Тестовый текст!!!<br />
         <a href="#">Тестовая ссылка</a>
       </p>
-      <a class="button button-primary" href="http://www.inmak.com" role="button" target="_blank" rel="nofollow">
-        &nbsp;&nbsp;&nbsp;Перейти на сайт&nbsp;&raquo;&nbsp;&nbsp;&nbsp;</a>
       <!--
               <a href="https://vipbells.inmak.com/%d0%9b%d0%b8%d1%82%d1%8c%d0%b5_%d0%ba%d0%be%d0%bb%d0%be%d0%ba%d0%be%d0%bb%d0%be%d0%b2_%d0%b2_%d0%92%d0%be%d1%80%d0%be%d0%bd%d0%b5%d0%b6%d0%b5/?58547"
                 class="o o-first">
