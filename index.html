@@ -806,8 +806,25 @@
       #images {
         margin-bottom: 1.0rem;
       }
-      .gallery .amp-carousel-slide>.i-amphtml-replaced-content {
+      .gallery {
+        background: rgba(0,0,0,.3);
+      }
+      .gallery .amp-carousel-slide .i-amphtml-replaced-content {
         object-fit: scale-down;
+      }
+      .gallery .caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,.6);
+        max-height: 30%;
+        padding: 0.5rem 2.0rem;
+        text-align: center;
+      }
+      .gallery .caption h6 {
+        color: #fff;
+        margin: 0;
       }
     </style>
   </head>
@@ -958,17 +975,33 @@
         rel="nofollow" role="button">Прайс</a>
       
       <h4 id="images">Наша галерея</h4>
-      <amp-carousel class="gallery" type="slides" layout="responsive"
-      width="480" height="270"
-      data-next-button-aria-label="Следующая"
-      data-previous-button-aria-label="Предыдущая"
-      data-button-count-format="(%s из %s)">
-        <amp-img src="http://inmak.com/p/KONTRAKT-PROEKT/19.jpg" layout="fill"></amp-img>
-        <amp-img src="http://inmak.com/p/KONTRAKT-PROEKT/20.jpg" layout="fill"></amp-img>
-        <amp-img src="https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636_960_720.jpg"
-          layout="fill"></amp-img>
-        <amp-img src="https://i.pinimg.com/originals/0f/99/38/0f9938bc9dfbda56575b624dca7bd760.jpg"
-          layout="fill"></amp-img>
+      <amp-carousel class="gallery" type="slides" layout="responsive" width="480" height="270"
+        data-next-button-aria-label="Следующая" data-previous-button-aria-label="Предыдущая"
+        data-button-count-format="(%s из %s)">
+        <div class="slide">
+          <amp-img src="http://inmak.com/p/KONTRAKT-PROEKT/19.jpg" layout="fill"></amp-img>
+          <div class="caption">
+            <h6>Супермаркет «АТБ» по пр. Маршала Жукова (угол ул. Олимпийской) в г. Харькове, 1521 кв. м.</h6>
+          </div>
+        </div>
+        <div class="slide">
+          <amp-img src="http://inmak.com/p/KONTRAKT-PROEKT/20.jpg" layout="fill"></amp-img>
+          <div class="caption">
+            <h6>Супермаркет «АТБ» (реконструкция) на ул. Золочевской, 25 в г. Харькове, 1046 кв. м.</h6>
+          </div>
+        </div>
+        <div class="slide">
+          <amp-img src="https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636_960_720.jpg" layout="fill"></amp-img>
+          <div class="caption">
+            <h6>Большая картинка</h6>
+          </div>
+        </div>
+        <div class="slide">
+          <amp-img src="https://i.pinimg.com/originals/0f/99/38/0f9938bc9dfbda56575b624dca7bd760.jpg" layout="fill"></amp-img>
+          <div class="caption">
+            <h6>Очень большая картинка</h6>
+          </div>
+        </div>
       </amp-carousel>
       <br><br>
       <amp-youtube data-videoid="YApuEWtG30w" layout="responsive" width="480" height="270"></amp-youtube>
