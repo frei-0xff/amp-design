@@ -6,6 +6,7 @@
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <title>"ИнМАК", научно-производственная компания, ООО Харьков Украина | бизнес каталог инмак поисковый сервер деловых партнеров сети интернет информационные услуги продвижение бизнеса заказчиков размещение коммерческих предложений сервере прайс листов любых объемов логотипов коллекций фотографий WEB страничек интеграция сайтов поисковой системой предоставление доменных имен хостинг технической площадке киеве UA IX реклама баннерной база данных коммерческие предложения товары цены спрос предложение опт розница предприятия фирмы магазины предприниматели украина россия снг русскоязычное деловое пространство межрегиональная справка маркетинговые исследования дизайн разработка создание баннеров для магазинов столов заказов программного обеспечения специализированных субд сверхбыстрый сверхбольших базах</title>
     <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup">
@@ -611,9 +612,6 @@
           object-position: 50% 50%;
         }
       }
-      amp-img.contain img {
-        object-fit: contain;
-      }
       footer {
         font-size: 80%;
         font-weight: normal;
@@ -770,7 +768,7 @@
         width: 8.2rem;
       }
       .offer-img amp-img img {
-        object-fit: none;
+        object-fit: scale-down;
         object-position: 2.86rem 50%;
       }
       .offer-img span:first-of-type {
@@ -805,6 +803,12 @@
       .mb-2 {
         margin-bottom: 2.0rem;
       }
+      #images {
+        margin-bottom: 1.0rem;
+      }
+      .gallery .amp-carousel-slide>.i-amphtml-replaced-content {
+        object-fit: scale-down;
+      }
     </style>
   </head>
   <body>
@@ -822,7 +826,7 @@
       <ul class="sidebar">
         <li><a href="#">Перейти на сайт</a></li>
         <li><a href="#offers">Наши предложения</a></li>
-        <li><a href="#">Наша галерея</a></li>
+        <li><a href="#images">Наша галерея</a></li>
         <li><a href="#videos">Наши видео</a></li>
       </ul>
     </amp-sidebar>
@@ -953,6 +957,19 @@
       <a class="button button-primary button-small mb-2" href="http://www.benzoinstrument.com/index.php?show_price=yes" target="_blank"
         rel="nofollow" role="button">Прайс</a>
       
+      <h4 id="images">Наша галерея</h4>
+      <amp-carousel class="gallery" type="slides" layout="responsive"
+      width="480" height="270" controls autoplay delay="5000"
+      data-next-button-aria-label="Следующая"
+      data-previous-button-aria-label="Предыдущая"
+      data-button-count-format="(%s из %s)">
+        <amp-img src="http://inmak.com/p/KONTRAKT-PROEKT/19.jpg" layout="fill"></amp-img>
+        <amp-img src="http://inmak.com/p/KONTRAKT-PROEKT/20.jpg" layout="fill"></amp-img>
+        <amp-img src="https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636_960_720.jpg"
+          layout="fill"></amp-img>
+        <amp-img src="https://i.pinimg.com/originals/0f/99/38/0f9938bc9dfbda56575b624dca7bd760.jpg"
+          layout="fill"></amp-img>
+      </amp-carousel>
       <br><br>
       <amp-youtube data-videoid="YApuEWtG30w" layout="responsive" width="480" height="270"></amp-youtube>
       <br><br><br><br><br><br><br><br><br><br><br>
